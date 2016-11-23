@@ -9,10 +9,13 @@ apps:
     command: bin/server.sh
 
 parts:
-  orientdb:
+  orientdb-package:
     plugin: dump
     source-type: tar
     source: http://central.maven.org/maven2/com/orientechnologies/orientdb-community/2.2.13/orientdb-community-2.2.13.tar.gz
+  oriendb:
+    after:
+      - orientdb-package
     stage-packages:
       - default-jdk
     snap:
