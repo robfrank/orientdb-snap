@@ -1,0 +1,19 @@
+name: orientdb
+version: "2.2.13"
+summary: OrientDB multi-nodel database
+description: OrientDB multi-nodel database
+confinement: strict
+
+apps:
+  orientdb:
+    command: bin/server.sh
+
+parts:
+  orientdb:
+    plugin: dump
+    source-type: tar
+    source: http://central.maven.org/maven2/com/orientechnologies/orientdb-community/2.2.13/orientdb-community-2.2.13.tar.gz
+    stage-packages:
+      - default-jdk
+    snap:
+      - usr/lib/jvm
