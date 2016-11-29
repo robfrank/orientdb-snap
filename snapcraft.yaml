@@ -7,16 +7,22 @@ confinement: strict
 apps:
   orientdb:
     command: bin/server.sh
+    plugs: [home, network, network-bind]
 
 parts:
   orientdb:
     plugin: dump
     source-type: tar
     source: http://central.maven.org/maven2/com/orientechnologies/orientdb-community/2.2.13/orientdb-community-2.2.13.tar.gz
-    stage-packages:
+    stage-packages: 
       - default-jdk
     snap:
+      - usr/lib/jvm/default-java/bin
+      - usr/lib/jvm/default-java/lib
+      - usr/lib/jvm/default-java/jre/bin
+      - usr/lib/jvm/default-java/jre/lib
+      - etc/java-*
       - bin
       - databases
       - config
-      - usr/lib/jvm
+
