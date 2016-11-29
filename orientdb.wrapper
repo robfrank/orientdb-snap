@@ -10,6 +10,7 @@ export ORIENTDB_HOME="$SNAP"
 # writable pathes are based of ORIENTDB_BASE
 export ORIENTDB_BASE="$SNAP_DATA"
 
+
 # create runtime data
 mkdir -p "$ORIENTDB_BASE/log"
 mkdir -p "$ORIENTDB_BASE/databases"
