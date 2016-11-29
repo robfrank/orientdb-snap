@@ -3,6 +3,8 @@
 set -e
 set -x
 
+export JAVA_HOME=$SNAP/usr/lib/jvm/default-java/
+
 # installation pathes are based of ORIENTDB_HOME
 export ORIENTDB_HOME="$SNAP"
 # writable pathes are based of ORIENTDB_BASE
