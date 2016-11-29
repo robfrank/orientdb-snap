@@ -1,4 +1,4 @@
-name: orientdb.wrapper
+name: orientdb
 version: "2.2.13"
 summary: OrientDB multi-nodel database
 description: OrientDB multi-nodel database
