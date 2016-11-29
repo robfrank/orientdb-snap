@@ -6,7 +6,7 @@ confinement: strict
 
 apps:
   orientdb:
-    command: bin/wrapper
+    command: bin/orientdb.wrapper
     daemon: simple
     stop-command: bin/shutdown.sh
     stop-timeout: 5s
@@ -33,6 +33,6 @@ parts:
     plugin: dump
     source: .
     organize:
-      orientdb: bin/wrapper
+      orientdb.wrapper: bin/orientdb.wrapper
     snap:
         - bin/*
