@@ -6,8 +6,12 @@ confinement: strict
 
 apps:
   orientdb:
-    command: bin/server.sh
-    plugs: [home, network, network-bind]
+    command: bin/wrapper
+    daemon: simple
+    stop-command: bin/shutdown.sh
+    stop-timeout: 5
+    plugs:
+      - network
 
 parts:
   orientdb:
@@ -25,4 +29,10 @@ parts:
       - bin
       - databases
       - config
-
+  glue:
+    plugin: dump
+    source: .
+    organize:
+      orientdb: bin/wrapper
+    snap:
+        - bin/*
