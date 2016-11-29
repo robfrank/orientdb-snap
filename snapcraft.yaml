@@ -1,4 +1,4 @@
-name: orientdb
+name: orientdb.wrapper
 version: "2.2.13"
 summary: OrientDB multi-nodel database
 description: OrientDB multi-nodel database
@@ -17,7 +17,7 @@ parts:
   orientdb:
     plugin: dump
     source-type: tar
-    source: http://central.maven.org/maven2/com/orientechnologies/orientdb-community/2.2.13/orientdb-community-2.2.13.tar.gz
+    source: http://central.maven.org/maven2/com/orientechnologies/orientdb.wrapper-community/2.2.13/orientdb.wrapper-community-2.2.13.tar.gz
     stage-packages: 
       - default-jdk
     snap:
